@@ -1,0 +1,17 @@
+<div class="banner">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}">
+    {% if current_user.is_authenticated %}
+        <span>{{ current_user.name }}</span>
+        <div class="hidden">
+            <span>|</span>
+            <span style="margin-left: 5px;" onclick="location.href='{{ url_for('logout') }}'">Выход</span> <!-- Добавлен отступ для пробела -->
+        </div>
+    {% else %}
+        <span class="menu-text">Меню</span>
+        <div class="hidden">
+            <span onclick="location.href='{{ url_for('login') }}'">Войти</span>
+            <span style="margin-left: 5px; margin-right: 5px;">|</span> <!-- Добавлен отступ для пробела -->
+            <span onclick="location.href='{{ url_for('register') }}'">Зарегистрироваться</span>
+        </div>
+    {% endif %}
+</div>

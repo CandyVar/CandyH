@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Users List</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #1c1c1c; /* Темный фон */
+            color: #ffffff; /* Белый текст */
+        }
+        h1 {
+            background-color: #2a2a2a; /* Цвет фона заголовка */
+            color: #e63946; /* Цвет текста заголовка */
+            padding: 20px;
+            text-align: center;
+            border-bottom: 2px solid #444; /* Цвет границы */
+            margin: 0;
+        }
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 20px;
+        }
+        li {
+            background-color: #2e2e2e; /* Цвет фона элементов списка */
+            margin: 10px 0;
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Тень для элементов списка */
+        }
+        a {
+            color: #e63946; /* Красный цвет для ссылок */
+            text-decoration: none;
+            padding: 5px 10px;
+            border: 1px solid #e63946; /* Красная граница */
+            border-radius: 4px;
+            transition: background-color 0.3s, color 0.3s; /* Плавные переходы */
+        }
+        a:hover {
+            background-color: #e63946; /* Красный цвет при наведении */
+            color: #1c1c1c; /* Темный цвет текста при наведении */
+        }
+    </style>
+</head>
+<body>
+    <h1>Список пользователей</h1> <!-- Изменено на русский -->
+    <ul>
+        {% for user in users %}
+            <li>
+                {{ user.name }}
+                <a href="{{ url_for('edit_user', user_id=user.id) }}">Редактировать</a> <!-- Изменено на русский -->
+            </li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

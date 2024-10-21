@@ -1,0 +1,65 @@
+/* Основные стили для формы */
+body {
+    background-color: #1c1c1c; /* Темный фон */
+    color: #ffffff; /* Белый текст */
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+form {
+    background-color: #2a2a2a; /* Цвет фона формы */
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    width: 300px; /* Ширина формы */
+    display: flex;
+    flex-direction: column; /* Выравнивание полей ввода и кнопки по вертикали */
+}
+
+/* Стили для заголовков и меток */
+label {
+    margin-top: 10px;
+    display: block;
+    font-weight: bold;
+}
+
+/* Стили для полей ввода */
+input[type="email"],
+input[type="password"],
+input[type="text"] {
+    width: calc(100% - 20px); /* Полная ширина поля минус отступы */
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #444; /* Цвет границы */
+    border-radius: 4px;
+    background-color: #333; /* Цвет фона полей */
+    color: #ffffff; /* Цвет текста */
+}
+
+/* Стили для кнопки отправки */
+input[type="submit"] {
+    background-color: #e63946; /* Цвет кнопки */
+    color: #ffffff; /* Цвет текста на кнопке */
+    border: none; /* Убираем границу */
+    padding: 10px;
+    margin-top: 15px;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background-color 0.3s ease; /* Плавный переход цвета */
+    align-self: center; /* Центрируем кнопку */
+    width: 100%; /* Полная ширина кнопки */
+}
+
+input[type="submit"]:hover {
+    background-color: #d62839; /* Цвет кнопки при наведении */
+}
+h2 {
+    text-align: center; /* Центрируем заголовок */
+    margin-bottom: 15px; /* Отступ снизу */
+    color: #e63946; /* Цвет заголовка */
+    font-size: 24px; /* Размер шрифта */
+}
